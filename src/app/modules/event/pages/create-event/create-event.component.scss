@@ -1,0 +1,47 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.create {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  &__header {
+    @include font-normal(900);
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 43px;
+    font-size: 36px;
+    line-height: 42px;
+
+    &--title {
+      margin-left: 20px;
+    }
+  }
+
+  &__form {
+    margin-left: 30px;
+  }
+
+  &__preview {
+    &--title {
+      @include font-normal(900);
+
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  &__submit {
+    width: 183px;
+    height: 41px;
+    border: 0;
+    border-radius: 0;
+    background: $color-three;
+    margin-top: 22px;
+
+    @include font-normal(900);
+    font-size: 36px;
+    line-height: 42px;
+  }
+}

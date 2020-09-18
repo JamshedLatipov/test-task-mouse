@@ -1,0 +1,46 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.event {
+  width: 177px;
+  height: 212px;
+  background: $color-three;
+  position: relative;
+
+  &__image {
+    @include font-normal(900);
+    font-size: 24px;
+    line-height: 28px;
+    padding: 50px 25px;
+  }
+
+  &__additional {
+    @include font-normal(900);
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 5px;
+    &--date {
+    }
+    &--address {
+      color: #ffffff;
+    }
+  }
+
+  &__name {
+    @include font-normal(900);
+    font-size: 36px;
+    line-height: 42px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+
+  &__content {
+    bottom: 0;
+    position: absolute;
+    background: $color-two;
+    width: 100%;
+    height: 76px;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.header {
+  background: $color-three;
+
+  &__nav {
+    &--container {
+      display: flex;
+    }
+
+    &--item {
+      font-size: 24px;
+      line-height: 28px;
+      padding: 7px 40px 8px 15px;
+      color: $color-four;
+      @include font-normal(900);
+
+      &.logo {
+        color: $color-two;
+        @include font-italic(900);
+      }
+
+      &.active {
+        color: #000000;
+      }
+    }
+  }
+}

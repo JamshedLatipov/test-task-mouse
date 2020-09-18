@@ -1,0 +1,35 @@
+<div class="create">
+  <div>
+    <div class="create__header">
+      <a (click)="back()" class="fa fa-arrow-left" aria-hidden="true"></a>
+      <h1 class="create__header--title">Add Event</h1>
+    </div>
+
+    <form class="create__form" [formGroup]="eventForm" (ngSubmit)="add()">
+      <app-text-field
+        formControlName="name"
+        label="Event name"
+      ></app-text-field>
+
+      <app-text-field
+        formControlName="address"
+        label="Address"
+      ></app-text-field>
+
+      <div class="input">
+        <app-text-field placeholder="Date format(dd-mm-yyyy)" formControlName="date" label="Date">
+          <div *ngIf="eventForm.controls['date'].hasError('pattern')">
+            Incorrect date format
+          </div>
+        </app-text-field>
+      </div>
+
+      <button class="create__submit">Add</button>
+    </form>
+  </div>
+
+  <div class="create__preview">
+    <h2 class="create__preview--title">Preview</h2>
+    <app-event [event]="eventForm.value"></app-event>
+  </div>
+</div>

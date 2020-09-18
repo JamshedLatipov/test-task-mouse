@@ -1,0 +1,32 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.page {
+
+  &__title {
+    @include font-normal(900);
+    font-size: 36px;
+    line-height: 42px;
+    margin: 6px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item:first-child {
+    margin-left: 0;
+  }
+  &__item {
+    margin: calc(36px / 2);
+  }
+  &__add {
+    @include font-normal(900);
+    width: 177px;
+    height: 212px;
+    font-size: 36px;
+    line-height: 42px;
+    background: $color-three;
+  }
+}

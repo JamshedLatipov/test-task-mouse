@@ -1,0 +1,32 @@
+<div class="input">
+  <div class="input__container">
+    <label
+      [for]="id"
+      [class.required]="required"
+      class="input__label"
+      *ngIf="label"
+    >
+      {{ label }}
+    </label>
+
+    <div class="input__errors">
+      <ng-content></ng-content>
+    </div>
+  </div>
+
+  <div>
+    <input
+      class="input__input"
+      autocomplete="none"
+      spellcheck="false"
+      [id]="id"
+      [type]="type"
+      [placeholder]="placeholder"
+      [required]="required"
+      [disabled]="disabled || readonly"
+      [readonly]="readonly"
+      (change)="onChange($event)"
+      (blur)="onBlur()"
+    />
+  </div>
+</div>

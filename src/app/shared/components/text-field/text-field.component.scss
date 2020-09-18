@@ -1,0 +1,30 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.input {
+  width: 314px;
+  &__label {
+    @include font-normal(normal);
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__input {
+    background: $color-three;
+    border: 0;
+    width: 314px;
+    height: 29px;
+  }
+
+  &__errors {
+    @include font-normal(normal);
+    font-size: 18px;
+    line-height: 21px;
+    color: $color-five;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

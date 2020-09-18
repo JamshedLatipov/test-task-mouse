@@ -1,0 +1,18 @@
+<div class="page">
+  <h1 class="page__title">home</h1>
+
+  <div class="page__container">
+    <div class="list">
+      <app-event
+        class="list__item"
+        *ngFor="let event of list$ | async"
+        [event]="event"
+      ></app-event>
+
+      <button class="list__add list__item" [routerLink]="'/events/add'">
+        <i class="fa fa-plus"></i>
+        <div>Add more</div>
+      </button>
+    </div>
+  </div>
+</div>

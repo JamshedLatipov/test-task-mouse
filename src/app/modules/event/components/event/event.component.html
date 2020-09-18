@@ -1,0 +1,12 @@
+<article class="event">
+  <div class="event__image">PICTURE</div>
+
+  <div class="event__content">
+    <div class="event__name">{{ event?.name }}</div>
+
+    <div class="event__additional">
+      <div class="event__additional--address">{{ event?.address }}</div>
+      <div class="event__additional--date">{{ event?.date | date: 'dd MMMM' }}</div>
+    </div>
+  </div>
+</article>
